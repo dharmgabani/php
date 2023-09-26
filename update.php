@@ -49,8 +49,8 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     $cost = $_GET['cost'];
     $isbnno = $_GET['isbnno'];
 
-      $sql = "UPDATE `booktable` SET `Book_Code`='$bookcode',`Book_name`='$bookname',`authername`='$authorname',`cost`='$cost',`isbno`='$isbnno' WHERE `isbnno`='$isbnno'";
-
+      $sql = "UPDATE `booktable` SET `Book_Code`='$bookcode',`Book_name`='$bookname',`Author_name`='$authorname',`cost`='$cost',`Isbnno`='$isbnno' WHERE `isbnno`='$isbnno'";
+log($sql)
       if ($conn->query($sql) === TRUE) {
             echo "<br> New record updated successfully";
             header('location:show.php');

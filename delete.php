@@ -1,7 +1,7 @@
 <?php
 include('connection.php');
-$isbnNo = $_GET['isbnNo'];
-$sql = "DELETE FROM `booktable` WHERE isbnNo='$isbnNo'";
+$isbnno = $_GET['isbnno'];
+$sql = "DELETE FROM `booktable` WHERE isbnno='$isbnno'";
 $data = mysqli_query($conn,$sql);
 if($data){
     echo "deleted <br>";
